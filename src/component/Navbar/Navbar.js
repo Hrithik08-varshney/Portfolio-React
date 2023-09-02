@@ -20,7 +20,7 @@ const Navbar = () => {
   ]
   return (
     <div className="navbar_comp flexCommon">
-        <div className="navbar_name df jcsb">
+        <div className="navbar_name df jcsb cpoint">
           <div className="firstName">
                Hrithik
           </div>

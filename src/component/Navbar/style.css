@@ -1,43 +1,99 @@
-.flexCommon{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.flexCommon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.cpoint{
-    cursor: pointer;
+.cpoint {
+  cursor: pointer;
 }
-.df{
-    display: flex;
+.df {
+  display: flex;
 }
-.jcsa{
-    justify-content: space-around;
+.jcsa {
+  justify-content: space-around;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.navbar_comp {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  background-color: rgb(249, 78, 78);
+}
+.navbar_name {
+  color: white;
+  font-family: "Rubik Iso", cursive;
+  font-size: 30px;
+  letter-spacing: 3px;
+  width: 22%;
+}
 
+.navbar_name {
+  border: 8px solid;
+  border-image: repeating-linear-gradient(
+      135deg,
+      #f8ca00 0 10px,
+      #e97f02 0 20px,
+      #bd1550 0 30px
+    )
+    8;
+  -webkit-mask: conic-gradient(
+        from 180deg at top 8px right 8px,
+        #0000 90deg,
+        #000 0
+      )
+      var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0
+      var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
 }
-.jcsb{
-    justify-content: space-between;
+.navbar_name:hover {
+  --_i: 100%;
+  transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
 }
-.navbar_comp{
-    display: flex;
-    width: 100vw;
-    height: 80px;
-    background-color: rgb(249, 78, 78);
+
+.firstName {
+  color: black;
 }
-.navbar_name{
-    color: white;
-    font-family: 'Rubik Iso', cursive;
-    font-size: 30px;
-    letter-spacing: 3px;
-    width: 21%;
+.navbar_route {
+  font-family: "Rubik Iso", cursive;
+  font-size: 30px;
+  width: 50%;
 }
-.firstName{
+
+.routeValues:nth-child(even) {
+  color: white;
+}
+
+.routeValues {
+  --b: 0.1em; /* the thickness of the line */
+  --c: #1095c1; /* the color */
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, #000 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+      no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear,
+    background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+.routeValues:hover {
+  --_p: 100%;
+  --_s: 0.3s;
+  color: #014258;
+}
+
+/* .routeValues:nth-child(even):hover {
+    --_p: 100%;
+    --_s: .3s;
     color: black;
-}
-.navbar_route{
-    font-family: 'Rubik Iso', cursive;
-    font-size: 30px;
-    width: 50%;
-}
-
-.navbar_route:nth-child(even) {
-    color: white;
   }
+
+  .routeValues:nth-child(odd):hover {
+    --_p: 100%;
+    --_s: .3s;
+    color: white;
+  } */
