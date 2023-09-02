@@ -1,4 +1,43 @@
+.flexCommon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cpoint{
+    cursor: pointer;
+}
+.df{
+    display: flex;
+}
+.jcsa{
+    justify-content: space-around;
+
+}
+.jcsb{
+    justify-content: space-between;
+}
 .navbar_comp{
     display: flex;
     width: 100vw;
+    height: 80px;
+    background-color: rgb(249, 78, 78);
 }
+.navbar_name{
+    color: white;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 30px;
+    letter-spacing: 3px;
+    width: 21%;
+}
+.firstName{
+    color: black;
+}
+.navbar_route{
+    font-family: 'Rubik Iso', cursive;
+    font-size: 30px;
+    width: 50%;
+}
+
+.navbar_route:nth-child(even) {
+    color: white;
+  }
