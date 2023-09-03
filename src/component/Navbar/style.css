@@ -15,18 +15,40 @@
 .jcsb {
   justify-content: space-between;
 }
+
 .navbar_comp {
   display: flex;
   width: 100vw;
   height: 80px;
   background-color: rgb(249, 78, 78);
 }
+
+.diff_Nav_View {
+  width: 100vw;
+  .img_div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-left: 10px;
+    .myImage {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+  .icon_div {
+    font-size: 30px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+}
+
 .navbar_name {
   color: white;
   font-family: "Rubik Iso", cursive;
   font-size: 30px;
   letter-spacing: 3px;
-  width: 22%;
+  width: 340px;
 }
 
 .navbar_name {
@@ -96,4 +118,36 @@
     --_p: 100%;
     --_s: .3s;
     color: white;
+  } */
+
+@media (max-width: 1440px) {
+  .navbar_route {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar_name {
+    font-size: 20px;
+    width: 250px;
+  }
+  .diff_Nav_View {
+    .img_div {
+      width: 30px;
+      height: 30px;
+      .myImage {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .icon_div {
+      font-size: 20px;
+    }
+  }
+}
+/* 
+  @media(max-width:1200px){
+    .navbar_route {
+      width: 60%;
+    }
   } */
