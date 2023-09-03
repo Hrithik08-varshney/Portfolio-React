@@ -34,12 +34,21 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
+      border: 2px solid gray;
+    }
+    .myImage:hover{
+      border: 5px solid black;
     }
   }
   .icon_div {
     font-size: 30px;
     padding-right: 10px;
     padding-top: 10px;
+  }
+
+  .icon_div:hover{
+    color: white;
+    cursor: pointer;
   }
 }
 
