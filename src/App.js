@@ -1,9 +1,16 @@
 import Home from "./pages/Home/Home";
-import "./App.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Profile from "./pages/Profile/Profile";
 function App() {
   return (
     <>
-      <Home/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/myprofile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

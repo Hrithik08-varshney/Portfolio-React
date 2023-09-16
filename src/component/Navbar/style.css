@@ -19,13 +19,18 @@
 .navbar_comp {
   display: flex;
   width: 100vw;
-  height: 80px;
-  background-color: rgb(249, 78, 78);
+  height: 65px;
+  background-color: rgb(47, 43, 43);
+}
+
+.h260{
+  height: 260px;
 }
 
 .diff_Nav_View {
   width: 100vw;
   .img_div {
+    cursor: pointer;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -44,6 +49,7 @@
     font-size: 30px;
     padding-right: 10px;
     padding-top: 10px;
+    color: yellow;
   }
 
   .icon_div:hover{
@@ -86,7 +92,7 @@
 }
 
 .firstName {
-  color: black;
+  color: yellow;
 }
 .navbar_route {
   font-family: "Rubik Iso", cursive;
@@ -98,7 +104,12 @@
   color: white;
 }
 
+.routeValues:nth-child(odd) {
+  color: yellow;
+}
+
 .routeValues {
+  cursor: pointer;
   --b: 0.1em; /* the thickness of the line */
   --c: #1095c1; /* the color */
   padding-block: var(--b);
@@ -160,3 +171,18 @@
       width: 60%;
     }
   } */
+
+  .navigationMenu{
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .diff_Nav_View_Parent{
+    display:grid;
+  }
+
+  .p5{
+    padding: 5px;
+  }
