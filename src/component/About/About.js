@@ -1,39 +1,35 @@
 import React, { useState } from "react";
 import "./style.css";
 import { TypeAnimation } from "react-type-animation";
-import { FaStackOverflow } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import SocialMedia from "../../containers/SocialMedia/SocialMedia";
+
 const About = () => {
   const [textColor, setTextColor] = useState("red");
-  const socialMediaLinks = [
-    {
-      icon: <FaStackOverflow />
-    },
-    {
-      icon: <FaGithub />
-    },
-    {
-      icon: <FaLinkedin />
-    },
-    {
-      icon: <FaInstagram />
-    },
-    {
-      icon: <SiLeetcode />
-    }
-  ]
+  const handleChangeColor = () => {
+    const items = [
+      "blue",
+      "green",
+      "purple",
+      "pink",
+      "brown",
+      "darkmagenta",
+      "darksalmon",
+      "dodgerblue",
+      "firebrick",
+      "darkviolet",
+    ];
+    setTextColor(items[Math.floor(Math.random() * items.length)]); // set random color
+  };
+
   return (
     <div className="about-section">
       <div
-      className="animation-div"
+        className="animation-div"
         style={{
           color: textColor,
           width: "80%",
           textAlign: "center",
-          fontFamily:"cursive"
+          fontFamily: "cursive",
         }}
       >
         <TypeAnimation
@@ -52,28 +48,11 @@ const About = () => {
           repeat={Infinity}
         />
       </div>
-      <button
-      class="button-55"
-        onClick={() => {
-          const items = [
-            "blue",
-            "green",
-            "purple",
-            "pink",
-            "brown",
-            "darkmagenta",
-            "darksalmon",
-            "dodgerblue",
-            "firebrick",
-            "darkviolet",
-          ];
-          setTextColor(items[Math.floor(Math.random() * items.length)]); // set random color
-        }}
-      >
+      <button class="button-55" onClick={handleChangeColor}>
         Change Color
       </button>
       <div className="socialMedia-links">
-
+        <SocialMedia />
       </div>
     </div>
   );
