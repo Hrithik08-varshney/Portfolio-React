@@ -23,8 +23,10 @@
   background-color: rgb(47, 43, 43);
 }
 
-.h260{
+.h260 {
   height: 260px;
+  position: absolute;
+  z-index: 10;
 }
 
 .diff_Nav_View {
@@ -41,7 +43,7 @@
       border-radius: 50%;
       border: 2px solid gray;
     }
-    .myImage:hover{
+    .myImage:hover {
       border: 5px solid black;
     }
   }
@@ -52,7 +54,7 @@
     color: yellow;
   }
 
-  .icon_div:hover{
+  .icon_div:hover {
     color: white;
     cursor: pointer;
   }
@@ -172,17 +174,17 @@
     }
   } */
 
-  .navigationMenu{
-    display: grid;
-    place-items: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
+.navigationMenu {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
 
-  .diff_Nav_View_Parent{
-    display:grid;
-  }
+.diff_Nav_View_Parent {
+  display: grid;
+}
 
-  .p5{
-    padding: 5px;
-  }
+.p5 {
+  padding: 5px;
+}

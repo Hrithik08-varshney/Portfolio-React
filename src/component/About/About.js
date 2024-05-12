@@ -3,7 +3,7 @@ import "./style.css";
 import { TypeAnimation } from "react-type-animation";
 import SocialMedia from "../../containers/SocialMedia/SocialMedia";
 
-const About = () => {
+const About = ({ navigationBar }) => {
   const [textColor, setTextColor] = useState("red");
   const handleChangeColor = () => {
     const items = [
@@ -22,7 +22,13 @@ const About = () => {
   };
 
   return (
-    <div className="about-section">
+    <div
+      className={
+        navigationBar
+          ? "about-section about-section-navigation-height"
+          : "about-section"
+      }
+    >
       <div
         className="animation-div"
         style={{

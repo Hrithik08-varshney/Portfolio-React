@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { FaGripHorizontal } from "react-icons/fa";
 import myImage from "../../assets/images/myImage.jpeg";
-const Navbar = () => {
-
+const Navbar = ({ navigationBar, setNavigationBar }) => {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [navigationMenu, setNavigationMenu] = useState(false);
@@ -38,12 +37,13 @@ const Navbar = () => {
   ];
 
   const handleIcon = () => {
+    setNavigationBar(!navigationBar);
     setNavigationMenu(!navigationMenu);
   };
 
-  const handleProfile = ()=>{
-    navigate('/myprofile')
-  }
+  const handleProfile = () => {
+    navigate("/myprofile");
+  };
   return (
     <div
       className={
