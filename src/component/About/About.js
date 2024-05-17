@@ -2,23 +2,11 @@ import React, { useState } from "react";
 import "./style.css";
 import { TypeAnimation } from "react-type-animation";
 import SocialMedia from "../../containers/SocialMedia/SocialMedia";
-
+import { AboutTextColors } from "../../utils/constant";
 const About = ({ navigationBar }) => {
   const [textColor, setTextColor] = useState("red");
   const handleChangeColor = () => {
-    const items = [
-      "blue",
-      "green",
-      "purple",
-      "pink",
-      "brown",
-      "darkmagenta",
-      "darksalmon",
-      "dodgerblue",
-      "firebrick",
-      "darkviolet",
-    ];
-    setTextColor(items[Math.floor(Math.random() * items.length)]); // set random color
+    setTextColor(AboutTextColors[Math.floor(Math.random() * AboutTextColors.length)]); // set random color
   };
 
   return (
