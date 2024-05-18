@@ -3,10 +3,14 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { FaGripHorizontal } from "react-icons/fa";
 import myImage from "../../assets/images/myImage.jpeg";
+import { RxCross1 } from "react-icons/rx";
+
 const Navbar = ({ navigationBar, setNavigationBar }) => {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [navigationMenu, setNavigationMenu] = useState(false);
+  const [opendrawer, setOpenDrawer] = useState(false);
+
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
@@ -37,6 +41,7 @@ const Navbar = ({ navigationBar, setNavigationBar }) => {
   ];
 
   const handleIcon = () => {
+    setOpenDrawer(!opendrawer)
     setNavigationBar(!navigationBar);
     setNavigationMenu(!navigationMenu);
   };
@@ -78,8 +83,11 @@ const Navbar = ({ navigationBar, setNavigationBar }) => {
               <div className="firstName">Hrithik</div>
               <div className="lastName">Varshney</div>
             </div>
-            <div className="icon_div" onClick={handleIcon}>
-              <FaGripHorizontal />
+            <div
+              className="icon_div"
+              onClick={handleIcon}
+            >
+              {!opendrawer ? <FaGripHorizontal /> : <RxCross1 />}
             </div>
           </div>
           {navigationMenu && (
