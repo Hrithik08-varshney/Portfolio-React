@@ -3,6 +3,7 @@ import "./style.css";
 import { TypeAnimation } from "react-type-animation";
 import SocialMedia from "../../containers/SocialMedia/SocialMedia";
 import { AboutTextColors } from "../../utils/constant";
+import Wave from 'react-wavify'
 const About = ({ navigationBar }) => {
   const [textColor, setTextColor] = useState("red");
   const handleChangeColor = () => {
@@ -17,6 +18,16 @@ const About = ({ navigationBar }) => {
           : "about-section"
       }
     >
+    <Wave fill='#f79902'
+        paused={false}
+        style={{ display: 'flex' }}
+        options={{
+          height: 60,
+          amplitude: 20,
+          speed: 0.15,
+          points: 5
+        }}
+  />
       <div
         className="animation-div"
         style={{
